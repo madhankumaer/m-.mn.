@@ -1,0 +1,84 @@
+
+ #include <stdio.h>
+
+int main() {
+    float A;   
+    float B, C; 
+
+
+    printf("Enter distance in kilometers: ");
+    scanf("%f", &A);
+
+
+    B = A * 1000;      // 1 km = 1000 meters
+    C = A * 100000;    // 1 km = 100000 centimeters
+
+
+    printf("Distance in meters: %f\n", B);
+    printf("Distance in centimeters: %f\n", C);
+
+    return 0;
+} 
+#include <stdio.h>
+
+int main() {
+    int days, hours, minutes, seconds;
+    long total_seconds;
+
+
+    printf("Enter the number of days: ");
+    scanf("%d", &days);
+
+    printf("Enter the number of hours: ");
+    scanf("%d", &hours);
+
+    printf("Enter the number of minutes: ");
+    scanf("%d", &minutes);
+
+    printf("Enter the number of seconds: ");
+    scanf("%d", &seconds);
+
+    
+    total_seconds = (days * 24 * 60 * 60)  
+                  + (hours * 60 * 60)      
+                  + (minutes * 60)        
+                  + (seconds);  
+
+    printf("Total number of seconds: %ld\n", total_seconds);
+    return 0;
+}
+#include <stdio.h>
+#include <math.h>  
+double stirling_factorial(int n) {
+    if (n == 0 || n == 1) {
+        
+    }
+    
+    double pi = 3.14159265358979323846;
+    double e = 2.71828182845904523536;
+    
+
+    double factorial_approx = sqrt(2 * pi * n) * pow(n / e, n);
+    
+    return factorial_approx;
+}
+
+int main() {
+    int n;
+
+    
+    printf("Enter a number to calculate its factorial: ");
+    scanf("%d", &n);
+
+    
+    if (n < 0) 
+    {
+        printf("Invalid input! Factorial is not defined for negative numbers.\n");
+    } else 
+    {
+        
+        double result = stirling_factorial(n);
+        printf("The approximate factorial of %d is: %.5f\n", n, result);
+    }
+      return 0;
+}
